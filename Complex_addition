@@ -1,0 +1,34 @@
+#include<conio.h>
+#include<iostream.h>
+
+class Complex
+{
+ private:
+ int a,b;
+ public:
+ void get_data(int x, int y)
+ {
+  a=x,b=y;
+ }
+ void display_info()
+ {
+ cout<<"\na="<<a<<" "<<"b="<<b;
+ }
+ Complex add(Complex c)
+ {
+ Complex temp;
+ temp.a=a+c.a;
+ temp.b=b+c.b;
+ return(temp);
+ }
+};
+void main()
+{
+ clrscr();
+ Complex c1,c2,c3;
+ c1.get_data(3,5);
+ c2.get_data(2,8);
+ c3=c1.add(c2);
+ c3.display_info();
+ getch();
+}
